@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&display=swap');
+
+@font-face {
+    font-family: 'Beyno';
+    font-style: normal;
+    font-weight: normal;
+    src: url('Police/BEYNO.woff') format('woff');
+    }
+
+@font-face {
+    font-family: 'Panthera';
+    font-style: normal;
+    font-weight: normal;
+    src: url('Police/Panthera.ttf') format('truetype');
+    }
+
+@font-face {
+    font-family: 'Wakanda Forever';
+    font-style: normal;
+    font-weight: normal;
+    src: url('Police/WakandaForever.ttf') format('truetype');
+    }
+
+/*Liste des variables de couleur*/    
+
+:root{
+    --white-color: #FFFFFF;
+    --rose-violet: #F2CEF2;
+    --grey-color: #9E91B7;
+    --light-violet: #DF99F2;
+    --blue-dark: #3D2DA6;
+    --dark-blue: #07338C;
+    --black-color: #021740;
+}
+
+/*Suppression du mise en page par défaut*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/*couleur de fond*/
+
+body{
+    max-width: 100%;
+    background: radial-gradient(circle, rgba(17,33,63,1) 0%, rgba(11,11,11,1) 39.1%, rgba(2,23,64,0.8376) 97%);
+}
+
+/* Media queries pour un design responsive */
+
+/* Design responsive pour les écrans de moins de 768px */
+@media (max-width: 768px) {
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul li {
+        margin-bottom: 10px;
+    }
+
+    #title .box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #title .box img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    #title .box h2 {
+        font-size: 24px;
+        margin: 20px 0;
+        right: 0;
+        text-align: center;
+    }
+
+    #title .box p {
+        font-size: 14px;
+        right: 0;
+        padding: 10px;
+        bottom: 0;
+    }
+
+    #title .box img.illustr {
+        width: 100%;
+        max-width: 300px;
+        right: 0;
+    }
+
+    div.citation {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .indication p {
+        font-size: 12px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .content img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .content p {
+        font-size: 12px;
+        width: auto;
+        text-align: center;
+        position: static;
+        margin: 10px 0;
+    }
+
+    .form-container {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .form-input {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    footer .foot-contain {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer img.parent {
+        width: 150px;
+    }
+
+    footer img.child {
+        width: 60px;
+    }
+
+    .page ul li {
+        font-size: 12px;
+    }
+
+    .last h3, .page h3 {
+        font-size: 16px;
+    }
+
+    .last-item ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .last-item ul li {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+
+/*mise en page header*/
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.nav img {
+   margin-top: 5px;
+   height: 25px; 
+}
+
+.nav img:hover {
+    filter: brightness(0) saturate(100%) invert(92%) sepia(35%) saturate(2969%) hue-rotate(248deg) brightness(96%) contrast(96%);
+    cursor: pointer;
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li a{
+    margin-right: 50px;
+    text-decoration: none;
+    color: var(--white-color);
+    font-family: "Beyno";
+}
+
+.nav ul li:last-child a{
+    margin-right: 0;
+}
+
+.nav ul li a:hover {
+    color: var(--white-color);
+    text-decoration: underline;
+}
+
+/*design de l'intro*/
+
+#title .box img {
+    width:800px;
+}
+
+#title .box h2 {
+    font-family: "Beyno";
+    font-size: 32px;
+    color: var(--light-violet);
+    margin-bottom: 100px;
+
+    position: relative;
+    right: 90px;
+}
+
+#title .box p {
+    font-family: "Cantarell";
+    font-size: 10px;
+    color: var(--white-color);
+    text-align: justify;
+    padding-right: 25px;
+    position: relative;
+    right: 130px;
+    bottom: 230px
+    
+}
+
+#title .box img.illustr {
+    width: 600px;
+    position: relative;
+    right: 150px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*design des contenus*/
+
+div.citation {
+    font-family: "Wakanda Forever";
+    font-size: 30px;
+    color: var(--light-violet);
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.indication p {
+    font-family: "Cantarll";
+    font-size: 14px;
+    color: var(--white-color);
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.indication p.gras {
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.indication p span {
+    font-family: "Wakanda Forever";
+}
+
+.content {
+    display: grid;
+    grid-column: 100px 100px;
+    grid-auto-rows: auto;
+}
+
+.content p {
+    font-family: "Cantarell";
+    color: var(--white-color);
+    font-size: 10px;
+    text-align: center;
+    width: 250px;
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+    top: 80px;
+    left: 60px;
+}
+
+.content img {
+    width : 400px;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/*Design formulaire*/
+
+.form-container {
+    padding-left: 20px;
+    margin-bottom: 100px;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 18px;
+    padding-left: 12px;
+  }
+  
+  .form-input {
+    display: block;
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #dba7d2;
+    border-radius: 25px;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 20px;
+  }
+  
+  .form-input::placeholder {
+    color: #dba7d2;
+  }
+  
+  .form-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #dba7d2;
+    border: none;
+    border-radius: 25px;
+    color: #0d0d0d;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .form-button:hover {
+    background: #e6bbe3;
+  }
+
+  /*design footer*/
+
+footer {
+    background: radial-gradient(circle, rgba(61,45,166,1) 0%, rgba(2,23,64,1) 31%);
+    
+    width: 100vw; /* La largeur de l'écran */
+    position: relative; /* Permet de la positionner par rapport à l'écran */
+    left: 50%; /* Pour compenser le centrage */
+    transform: translateX(-50%); /* Recentre l'image */
+    margin-left: 0; /* Supprime les marges gauche */
+    margin-right: 0; /* Supprime les marges droite */
+}
+
+img.parent {
+    width: 200px;
+    position: relative;
+}
+
+img.child {
+    width: 80px;
+    position: relative;
+    bottom: 140px;
+    left: 55px;
+}
+
+.foot-contain {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.page h3 {
+    color: var(--white-color);
+    font-family: "Cantarell";
+}
+
+.page ul li{
+    list-style: none;
+    margin-bottom: 2px;
+    font-family: "Cantarell";
+    font-size: 15px;
+    
+}
+
+.page ul li:first-child {
+    margin-top: 20px;
+
+}
+
+.page ul li a{
+    text-decoration: none;
+    color: var(--white-color);
+    
+}
+
+.page ul li a:hover {
+    text-decoration: underline;
+}
+
+img.social {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.last h3 {
+    color: var(--white-color);
+    font-family: "Cantarell";
+    margin-bottom: 15px;
+}
+
+.last-item ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+.last-item ul li {
+    margin-right: 15px;
+}
+
+.last-item ul li:first-child{
+    list-style: none;
+}
+
+.last-item ul li a{
+    color: var(--white-color);
+    text-decoration: none;
+    font-family: "Cantarell";
+    font-size: 10px;
+}
+
+.last-item ul li::marker {
+    color: var(--rose-violet);
+}
+
+img.child:hover {
+    filter: brightness(0) saturate(100%) invert(92%) sepia(35%) saturate(2969%) hue-rotate(248deg) brightness(96%) contrast(96%);
+    cursor: pointer;
+}

@@ -1,0 +1,422 @@
+/*Les police à utiliser*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&display=swap');
+
+@font-face {
+    font-family: 'Beyno';
+    font-style: normal;
+    font-weight: normal;
+    src: url('Police/BEYNO.woff') format('woff');
+    }
+
+@font-face {
+    font-family: 'Panthera';
+    font-style: normal;
+    font-weight: normal;
+    src: url('Police/Panthera.ttf') format('truetype');
+    }
+
+@font-face {
+    font-family: 'Wakanda Forever';
+    font-style: normal;
+    font-weight: normal;
+    src: url('Police/WakandaForever.ttf') format('truetype');
+    }
+
+/*Liste des variables de couleur*/    
+
+:root{
+    --white-color: #FFFFFF;
+    --rose-violet: #F2CEF2;
+    --grey-color: #9E91B7;
+    --light-violet: #DF99F2;
+    --blue-dark: #3D2DA6;
+    --dark-blue: #07338C;
+    --black-color: #021740;
+}
+
+/*Suppression du mise en page par défaut*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/*couleur de fond*/
+
+body{
+    width: 100%;
+    background: radial-gradient(circle, rgba(17,33,63,1) 0%, rgba(11,11,11,1) 39.1%, rgba(2,23,64,0.8376) 97%);
+}
+
+/* Styles pour les écrans de 768px et moins (tablettes et téléphones) */
+@media screen and (max-width: 768px) {
+    /* Suppression du padding du body pour optimiser l'espace */
+    body {
+        padding: 0;
+    }
+
+    /* Ajustement du header */
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav img {
+        height: 20px; /* Réduction de la taille du logo */
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul li a {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Ajustement de la section #box */
+    #box {
+        min-height: 80vh; /* Réduction de la hauteur minimale */
+        padding: 10px;
+    }
+
+    .en-tete {
+        grid-template-columns: 1fr;
+        padding-left: 0;
+    }
+
+    .en-tete h1 {
+        font-size: 36px; /* Réduction de la taille de la police */
+    }
+
+    .en-tete h2 {
+        font-size: 24px;
+    }
+
+    .en-tete p {
+        font-size: 14px;
+    }
+
+    /* Contenu principal */
+    #content {
+        margin-top: 50px;
+        padding: 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .description1, .description2, .description3, .description4, .description5, .description6 {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .description1 h2, .description2 h2, .description3 h2, .description4 h2, .description5 h2, .description6 h2 {
+        font-size: 18px;
+    }
+
+    /* Vidéo */
+    .video iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .foot-contain {
+        flex-direction: column;
+    }
+
+    .box-parent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page ul, .last ul {
+        text-align: center;
+    }
+}
+
+/*mise en page header*/
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.nav img {
+   margin-top: 5px;
+   height: 25px; 
+}
+
+.nav img:hover {
+    filter: brightness(0) saturate(100%) invert(92%) sepia(35%) saturate(2969%) hue-rotate(248deg) brightness(96%) contrast(96%);
+    cursor: pointer;
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li a{
+    margin-right: 50px;
+    text-decoration: none;
+    color: var(--white-color);
+    font-family: "Beyno";
+}
+
+.nav ul li:last-child a{
+    margin-right: 0;
+}
+
+.nav ul li a:hover {
+    color: var(--white-color);
+    text-decoration: underline;
+}
+
+.nav ul li a:visited {
+    color: var(--rose-violet);
+}
+
+/*Design de l'en-tete*/
+
+#box {
+    background-image: url("Illustrations + Logo/Wakanda/Pantherwakanda1.png");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 100%;
+    min-height: 100vh; 
+    padding: 20px; 
+}
+
+.en-tete{
+    padding-left: 50px;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-auto-rows: auto;
+}
+
+.en-tete h1, .en-tete h2, .en-tete p {
+    grid-column: 1 ;
+}
+
+.en-tete h1 {
+    font-family: "Panthera";
+    color: var(--rose-violet);
+    font-size: 68px;
+}
+
+.en-tete h2 {
+    font-family: "Wakanda Forever";
+    color: var(--rose-violet);
+    font-size: 32px;
+}
+
+.en-tete p{
+    font-family: "Cantarell";
+    color: var(--white-color);
+    font-size: 16px;
+    text-align: justify;
+}
+
+/*Design du contenu principal*/
+
+#content {
+    padding: 0 40px;
+    margin-top: 100px ;
+    background-image: url("Illustrations + Logo/Wakanda/Pantherwakanda2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 20px
+}
+
+#content .description1 h2, 
+.description2 h2, .description3 h2, 
+.description4 h2, .description5 h2, 
+.description6 h2{
+    font-family: "Beyno";
+    font-size: 32px;
+    color: var(--light-violet);
+}
+
+#content .description1 p, 
+.description2 p, .description3 p, 
+.description4 p, .description5 p, 
+.description6 p {
+    font-family: "Cantarell";
+    font-size: 16px;
+    color: var(--white-color);
+    text-align: justify;
+}
+
+.description1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.description3 {
+    grid-column: 2 / 5;
+    grid-row: 1;
+}
+
+.video {
+    grid-column: 1 / 2;
+    grid-row: 2;
+}
+
+.description2 {
+    grid-column: 1 / 2;
+    grid-row: 3;
+}
+
+.description4 {
+    grid-column: 2 / 5;
+    grid-row: 2;
+    position: relative;
+    bottom: 400px
+}
+
+.description5 {
+    grid-column: 2 / 5;
+    grid-row: 3;
+    position: relative;
+    bottom: 380px;
+}
+
+.description6 {
+    grid-column: 2 / 5;
+    grid-row: 4;
+    position: relative;
+    bottom: 700px;
+}
+
+/*design footer*/
+
+footer {
+    background: radial-gradient(circle, rgba(61,45,166,1) 0%, rgba(2,23,64,1) 31%);
+    
+    width: 100vw; /* La largeur de l'écran */
+    position: relative; /* Permet de la positionner par rapport à l'écran */
+    left: 50%; /* Pour compenser le centrage */
+    transform: translateX(-50%); /* Recentre l'image */
+    margin-left: 0; /* Supprime les marges gauche */
+    margin-right: 0; /* Supprime les marges droite */
+}
+
+img.parent {
+    width: 200px;
+    position: relative;
+}
+
+img.child {
+    width: 80px;
+    position: relative;
+    bottom: 140px;
+    left: 55px;
+}
+
+img.child {
+    filter: brightness(0) saturate(100%) invert(92%) sepia(35%) saturate(2969%) hue-rotate(248deg) brightness(96%) contrast(96%);
+    cursor: pointer;
+}
+
+.foot-contain {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.page h3 {
+    color: var(--white-color);
+    font-family: "Cantarell";
+}
+
+.page ul li{
+    list-style: none;
+    margin-bottom: 2px;
+    font-family: "Cantarell";
+    font-size: 15px;
+    
+}
+
+.page ul li:first-child {
+    margin-top: 20px;
+
+}
+
+.page ul li a{
+    text-decoration: none;
+    color: var(--white-color);
+    
+}
+
+.page ul li a:hover {
+    text-decoration: underline;
+}
+
+img.social {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.last h3 {
+    color: var(--white-color);
+    font-family: "Cantarell";
+    margin-bottom: 15px;
+}
+
+.last-item ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+.last-item ul li {
+    margin-right: 15px;
+}
+
+.last-item ul li:first-child{
+    list-style: none;
+}
+
+.last-item ul li a{
+    color: var(--white-color);
+    text-decoration: none;
+    font-family: "Cantarell";
+    font-size: 10px;
+}
+
+.last-item ul li::marker {
+    color: var(--rose-violet);
+}

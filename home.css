@@ -1,0 +1,594 @@
+/*Les police à utiliser*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&display=swap');
+
+@font-face {
+    font-family: 'Beyno';
+    font-style: normal;
+    font-weight: normal;
+    src: url('Police/BEYNO.woff') format('woff');
+    }
+
+@font-face {
+    font-family: 'Panthera';
+    font-style: normal;
+    font-weight: normal;
+    src: url('Police/Panthera.ttf') format('truetype');
+    }
+
+@font-face {
+    font-family: 'Wakanda Forever';
+    font-style: normal;
+    font-weight: normal;
+    src: url('Police/WakandaForever.ttf') format('truetype');
+    }
+
+/*Liste des variables de couleur*/    
+
+:root{
+    --white-color: #FFFFFF;
+    --rose-violet: #F2CEF2;
+    --grey-color: #9E91B7;
+    --light-violet: #DF99F2;
+    --blue-dark: #3D2DA6;
+    --dark-blue: #07338C;
+    --black-color: #021740;
+}
+
+/*Suppression du mise en page par défaut*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/*Responsive design*/
+
+@media screen and (max-width: 500px) {
+    .nav {
+        flex-direction: row;
+        align-items:flex-start;
+        
+    }
+
+    .nav ul {
+        flex-direction: row;
+        margin: 0;
+        justify-content: flex-end;
+    }
+
+    .nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .nav ul li a {
+        margin-right: 0;
+    }
+
+    .nav img{
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .title {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .title .zone {
+        margin-bottom: 20px;
+    }
+
+    .title .portrait img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #hero {
+        margin-bottom: 50px; /* Ajustez selon le besoin */
+    }
+    
+    #main {
+        margin-top: 50px;
+    }
+    
+    
+   
+   
+    #hero .perso {
+        flex-direction: column;
+        align-items: center;
+    }
+
+  
+    
+
+    .perso .description {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .perso .description img {
+        margin: 0 auto 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .texte1, .texte2, .texte3, .latéral, .panther {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .form-container {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .form-container form input, 
+    .form-container form textarea, 
+    .form-container form button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .foot-contain {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+
+    
+    
+
+
+
+/*couleur de fond*/
+
+body{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    background: radial-gradient(circle, rgba(17,33,63,1) 0%, rgba(11,11,11,1) 39.1%, rgba(2,23,64,0.8376) 97%);
+}
+
+
+/*mise en page header*/
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.nav img {
+   margin-top: 5px;
+   height: 25px; 
+}
+
+.nav img:hover {
+    filter: brightness(0) saturate(100%) invert(92%) sepia(35%) saturate(2969%) hue-rotate(248deg) brightness(96%) contrast(96%);
+    cursor: pointer;
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li a{
+    margin-right: 50px;
+    text-decoration: none;
+    color: var(--white-color);
+    font-family: "Beyno";
+}
+
+.nav ul li:last-child a{
+    margin-right: 0;
+}
+
+.nav ul li a:hover{
+    color: var(--white-color);
+    text-decoration: underline;
+}
+
+/*Design en-tete contenu main*/
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title .portrait img{
+    width: 600px;
+    
+}
+
+
+
+.title .zone h1 {
+    font-family: "Panthera", sans-serif;
+    font-size: 68px;
+    color: var(--rose-violet);
+}
+
+.title .zone h2 {
+    font-family: "Beyno";
+    font-size: 32px;
+    color: var(--rose-violet);
+}
+
+.title .zone p {
+    font-family: "Cantarell";
+    font-size: 16px;
+    color: var(--white-color);
+    padding: 10px 0;
+    text-align: justify;
+    
+}
+
+.title .zone a {
+    font-family: "Cantarell";
+    color: var(--white-color);
+}
+
+/*Design des autres personnages*/
+
+#hero{
+    background: rgb(17,33,63);;
+    height: 173px;
+    margin-bottom: 150px;
+    
+}
+
+.perso{
+    display: flex;
+    
+}
+
+
+
+#hero .perso .description h2 {
+    font-family: "Beyno";
+    font-size: 32px;
+    color: var(--rose-violet);
+}
+
+#hero .perso .description p{
+    font-family: "Cantarell";
+    font-size: 14px;
+    color: var(--white-color)
+}
+
+#hero .perso .description a{
+    color: var(--white-color);
+}
+
+.perso .description img {
+    float: left;
+    margin-right: 10px;
+    width: 150px;
+    
+}
+
+.description img.perdu{
+    height: 75%;
+}
+
+/*Design texte principal*/
+
+#main {
+    margin-bottom: 100px;
+}
+
+#main .content h2.intro {
+    font-family: "Beyno";
+    font-size: 36px;
+    color: var(--rose-violet);
+}
+
+#main .content p.para{
+    font-family: "Cantarell";
+    font-size: 16px;
+    color: var(--white-color);
+    line-height: 1.5;
+    margin-bottom: 1em;
+    text-align: justify;
+    
+}
+
+/*placement par grille*/
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: 20px;
+}
+
+.content div.texte1{
+    grid-column: 1 / 4 ;
+    grid-row: 1;
+}
+
+.content div.texte2 {
+    grid-column: 1 / 4;
+    grid-row: 2;
+}
+
+.content div.texte3 {
+    grid-column: 1 / 4;
+    grid-row: 3;
+}
+
+.content div.latéral {
+    grid-column:4 / 5;
+    grid-row: 1 /3;
+}
+
+/*Design biographie latéral*/
+
+aside {
+    background: var(--white-color);
+    padding: 7em 2em;
+    padding-top: 2em;
+    border: none;
+    border-radius: 20px;
+}
+
+.latéral .illustr-barre img{
+    width: 50%;
+    height: auto;
+    position: relative;
+    left: 130px;
+    top: 30px;
+}
+
+aside h2 {
+    font-family: "Cantarell";
+    text-align: center;
+}
+
+aside ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+}
+
+aside ul li {
+    margin-right: 10px;
+    padding: 0 auto;
+    border: none;
+    background: var(--dark-blue);
+    padding: 5px 10px;
+    border-radius: 7px;
+    color: var(--white-color);
+    font-family: "Cantarell";
+    font-size: 10px;
+}
+
+aside ul li:last-child{
+    margin-right: 0;
+}
+
+aside p {
+    font-family: "Cantarell";
+    font-size: 14px;
+    margin-bottom: 0.01em;
+}
+
+aside span {
+    font-weight: bold;
+}
+
+/*design formulaire*/
+
+/* Conteneur du formulaire */
+
+#forme{
+    width: 100vw; /* La largeur de l'écran */
+    position: relative; /* Permet de la positionner par rapport à l'écran */
+    left: 50%; /* Pour compenser le centrage */
+    transform: translateX(-50%); /* Recentre l'image */
+    margin-left: 0; /* Supprime les marges gauche */
+    margin-right: 0; /* Supprime les marges droite */
+    
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("Illustrations + Logo/Accueil/Pantherhome7.png");
+    background-position: center;
+    margin-bottom: 200px;
+}
+
+
+
+.form-container {
+    
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+    border-radius: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Titres */
+  .form-container h2 {
+    font-family: "Cantarell";
+    color: #000000;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .form-container h1 {
+    font-family: "Cantarell";
+    color: #000000;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  /* Champs du formulaire */
+  form input, 
+  form textarea {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 2px solid #000000;
+    border-radius: 30px;
+    font-size: 14px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: #111D5E;
+    font-family: inherit;
+  }
+  
+  /* Zone de texte */
+  form textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  /* Bouton */
+  form button {
+    width: 174px;
+    height: 54px;
+    padding: 10px 15px;
+    background: var(--light-violet);
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  form button:hover {
+    background: #F19CA1;
+  }
+  
+/*design footer*/
+
+footer {
+    background: radial-gradient(circle, rgba(61,45,166,1) 0%, rgba(2,23,64,1) 31%);
+    
+    width: 100vw; /* La largeur de l'écran */
+    position: relative; /* Permet de la positionner par rapport à l'écran */
+    left: 50%; /* Pour compenser le centrage */
+    transform: translateX(-50%); /* Recentre l'image */
+    margin-left: 0; /* Supprime les marges gauche */
+    margin-right: 0; /* Supprime les marges droite */
+}
+
+img.parent {
+    width: 200px;
+    position: relative;
+}
+
+img.child {
+    width: 80px;
+    position: relative;
+    bottom: 140px;
+    left: 55px;
+}
+
+img.child:hover {
+    filter: brightness(0) saturate(100%) invert(92%) sepia(35%) saturate(2969%) hue-rotate(248deg) brightness(96%) contrast(96%);
+    cursor: pointer;
+}
+
+.foot-contain {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.page h3 {
+    color: var(--white-color);
+    font-family: "Cantarell";
+}
+
+.page ul li{
+    list-style: none;
+    margin-bottom: 2px;
+    font-family: "Cantarell";
+    font-size: 15px;
+    
+}
+
+.page ul li:first-child {
+    margin-top: 20px;
+
+}
+
+.page ul li a{
+    text-decoration: none;
+    color: var(--white-color);
+    
+}
+
+.page ul li a:hover {
+    text-decoration: underline;
+}
+
+img.social {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.last h3 {
+    color: var(--white-color);
+    font-family: "Cantarell";
+    margin-bottom: 15px;
+}
+
+.last-item ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+.last-item ul li {
+    margin-right: 15px;
+}
+
+.last-item ul li:first-child{
+    list-style: none;
+}
+
+.last-item ul li a{
+    color: var(--white-color);
+    text-decoration: none;
+    font-family: "Cantarell";
+    font-size: 10px;
+}
+
+.last-item ul li::marker {
+    color: var(--rose-violet);
+}
